@@ -1,0 +1,117 @@
+
+
+main {
+    display: flex;
+  justify-content: center;
+}
+
+/* main img {
+ position: absolute;
+    height: 100px;
+    width: 300px;
+
+} */
+
+h1{
+    text-align: center;
+}
+
+.skills-container {
+    position: absolute;
+    top: 250px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.skill-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 10px 10px 40px rgba(53, 53, 53, 0.5);
+
+}
+
+.skill-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 300px;
+    background-color: #ddd;
+    border: 3px solid #0040ff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden; /* Ensure the progress bar doesn't exceed the container */
+}
+
+.progress {
+    height: 110%;
+    padding-right: 5px;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 12px;
+    color: white;
+    background-color: #0040ff;
+    border-right: 2px solid #fff; /* Add border to the progress bar */
+}
+.info-box p{
+    font-size: 20px;
+}
+
+
+
+/*                     POINTED BOX              */
+.skill-info{
+    visibility: collapse;
+    position: absolute;
+    top: 50px;
+    left: 410px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px  rgba(53, 53, 53, 0.5);
+    transition: transform 0.7s ;
+    background-color: #ffffffbb;
+    color: black;
+    width: 500px;
+}
+  
+  .arrow {
+    position: absolute;
+  }
+  
+  /* Pointing towards right */
+  .skill-info.webs .arrow {
+    top: 40%;
+    left: -20px;
+    margin-top: -70px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #fffffff2;
+    
+
+  }
+  
+
+
+.skill-card:hover + .skill-info.webs{
+    visibility: visible ;
+    transform: translateY(-50px) translateX(10px);
+}
